@@ -1,16 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.mathgame.HelloController">
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mathgame.HelloController">
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
+   <HBox prefHeight="30.0" prefWidth="200.0" spacing="10.0">
+      <children>
+          <Button onAction="#onPlayButtonClick" text="Play!" />
+      </children>
+   </HBox>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+    <Label fx:id="equation" />
+   <TextField fx:id="answer" onAction="#onEnterClick" promptText="Hatch the Egg!" />
+   <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+   <Label fx:id="answerLabel" />
+   <HBox nodeOrientation="LEFT_TO_RIGHT" prefHeight="30.0" prefWidth="200.0" spacing="100.0">
+      <children>
+         <Label fx:id="pointsLabel" text="Points" />
+         <Label fx:id="levelLabel" alignment="CENTER_RIGHT" text="Level" />
+      </children>
+   </HBox>
 </VBox>
